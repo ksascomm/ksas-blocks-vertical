@@ -20,14 +20,20 @@ get_header();
 			?>
 		</div>
 
-			<?php
+		<?php
+		if ( have_posts() ) :
 			while ( have_posts() ) :
 				the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-			endwhile; // End of the loop.
-			?>
+				?>
+		<section class="error-404 not-found prose p-2">
+			<header class="page-header">
+				<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+			</header><!-- .page-header -->
+		</section>
+				<?php
+		endwhile;
+		endif;
+		?>
 			<?php
 			$positions      = get_terms(
 				'role',
@@ -51,11 +57,11 @@ get_header();
 					$people_query = new WP_Query(
 						array(
 							'post_type'      => 'people',
-							'role'           => $title_slug,
+							'role'           => $position_slug,
 							'meta_key'       => 'ecpt_people_alpha',
 							'orderby'        => 'meta_value',
 							'order'          => 'ASC',
-							'posts_per_page' => '-1',
+							'posts_per_page' => '100',
 						)
 					);
 
@@ -73,6 +79,56 @@ get_header();
 			endforeach;
 			wp_reset_postdata();
 			?>
+
+<?php
+if ( have_posts() ) :
+	while ( have_posts() ) :
+		the_post();
+		?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?>>
+
+	<div class="entry-content">
+		<?php
+		the_content();
+
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ksas-blocks' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
+	</div><!-- .entry-content -->
+
+		<?php if ( get_edit_post_link() ) : ?>
+		<footer class="entry-footer">
+					<?php
+					edit_post_link(
+						sprintf(
+							wp_kses(
+							/* translators: %s: Name of current post. Only visible to screen readers */
+								__( 'Edit <span class="screen-reader-text">%s</span>', 'ksas-blocks' ),
+								array(
+									'span' => array(
+										'class' => array(),
+									),
+								)
+							),
+							wp_kses_post( get_the_title() )
+						),
+						'<span class="edit-link">',
+						'</span>'
+					);
+					?>
+		</footer><!-- .entry-footer -->
+			<?php endif; ?>
+</article><!-- #post-<?php the_ID(); ?> -->
+
+			<?php
+			endwhile; // End of the loop.
+		endif;
+?>
 
 		</main><!-- #main -->
 

@@ -33,12 +33,15 @@ get_header();
 			?>
 		<div class="news-section mb-24">
 			<div class="front prose prose-sm sm:prose lg:prose-lg mx-auto">
-				<h2><?php echo esc_html( $heading ); ?>
-					<small>
-					<a class="button" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>">
-						View All Posts&nbsp;<span class="fa fa-chevron-circle-right" aria-hidden="true"></span></a>
-					</small>
-				</h2>
+			<div class="flex justify-between">
+					<div>
+						<h2><?php echo esc_html( $heading ); ?>
+					</div>
+					<div>
+						<a class="button" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>">
+							View All Posts&nbsp;<span class="fa fa-chevron-circle-right" aria-hidden="true"></span></a>
+					</div>
+				</div>
 			</div>
 			<?php
 			$news_query = new WP_Query(

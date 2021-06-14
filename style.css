@@ -306,3 +306,23 @@
 		margin-left: 3rem;
 	}
 }
+
+@media (min-width: 1000px) {
+	.header-inner {
+		padding: 1.4rem 0;
+	}
+}
+
+@media (min-width: 700px) {
+	.section-inner {
+		width: calc(100% - 2rem);
+	}
+}
+
+.site-title a {
+    padding-top: .25rem;
+}
+
+.news-section a.button {
+	margin-right: 2rem;
+}

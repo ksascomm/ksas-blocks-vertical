@@ -30,17 +30,4 @@
 			?>
 	</div>
 
-<?php
-if ( function_exists( 'get_field' ) && get_field( 'custom_sidebar' ) ) :
-	?>
-		<!-- ACF Custom Widget Sidebar -->
-	<?php
-	$custom_sidebar_widget = get_field( 'custom_sidebar', false, false );
-	if ( is_active_sidebar( $custom_sidebar_widget ) ) {
-		dynamic_sidebar( $custom_sidebar_widget );
-	}
-	?>
-	<?php
-	endif;
-?>
 </aside><!-- #secondary -->

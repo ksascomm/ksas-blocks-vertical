@@ -14,14 +14,14 @@ get_header();
 	<main id="site-content" class="site-main page-with-sidebar w-full lg:w-4/5 prose prose-sm sm:prose lg:prose-lg mx-auto">
 
 	<?php
-		while ( have_posts() ) :
-			the_post()
-			?>
-			<?php
-			get_template_part( 'template-parts/content', 'front' );
+	while ( have_posts() ) :
+		the_post()
+		?>
+		<?php
+		get_template_part( 'template-parts/content', 'front' );
 
 		endwhile; // End of the loop.
-		?>
+	?>
 
 		<?php
 
@@ -58,10 +58,24 @@ get_header();
 			endif;
 			?>
 		</div>
-		<?php else : // field_name returned false ?>
-		
-		<?php endif; // end of if field_name logic ?>
-		
+		<?php else : // field_name returned false. ?>
+
+		<?php endif; // end of if field_name logic. ?>
+
+		<?php
+		if ( function_exists( 'get_field' ) && get_field( 'custom_sidebar' ) ) :
+			?>
+		<!-- ACF Custom Widget Sidebar -->
+			<?php
+			$custom_sidebar_widget = get_field( 'custom_sidebar', false, false );
+			if ( is_active_sidebar( $custom_sidebar_widget ) ) : ?>
+				<div class="flex flex-col md:flex-row">
+					<?php dynamic_sidebar( $custom_sidebar_widget ); ?>
+				</div>
+			<?php endif; ?>
+			<?php
+		endif;
+		?>
 
 	</main><!-- #main -->
 

@@ -56,7 +56,7 @@
 						</a>
 					</div>
 					<div class="lg:col-span-2">
-						<h1 class="site-title font-serif font-bold mt-3">
+						<h1 class="site-title font-serif font-bold mt-4">
 						<a class=" text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php bloginfo( 'name' ); ?>
 							<small class="block font-normal pt-1">

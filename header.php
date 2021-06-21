@@ -46,7 +46,7 @@
 	<div class="header-titles-wrapper">
 			<div class="header-inner section-inner">
 				<div class="header-titles grid grid-cols-1 lg:grid-cols-3 gap-4">
-					<div class="h-auto shield mx-auto -mt-4">
+					<div class="h-auto shield mx-auto">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php if ( get_field( 'shield', 'option' ) == 'jhu' ) : ?>
 								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="h-auto w-full p-2" alt="JHU Shield">
@@ -56,10 +56,10 @@
 						</a>
 					</div>
 					<div class="lg:col-span-2">
-						<h1 class="site-title font-serif font-bold text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl pt-2">
+						<h1 class="site-title font-serif font-bold mt-3">
 						<a class=" text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php bloginfo( 'name' ); ?>
-							<small class="block font-normal">
+							<small class="block font-normal pt-1">
 							<?php
 								$ksas_blocks_description = get_bloginfo( 'description', 'display' );
 							if (
@@ -69,7 +69,6 @@
 								?>
 								<?php endif; ?>
 							</small>
-							
 						</a>
 						</h1>
 					</div>

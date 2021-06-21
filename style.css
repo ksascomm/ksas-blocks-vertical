@@ -309,13 +309,13 @@
 
 @media (min-width: 1000px) {
 	.header-inner {
-		padding: 1.4rem 0;
+		padding: 1.4rem 0 !important;
 	}
 }
 
 @media (min-width: 700px) {
 	.section-inner {
-		width: calc(100% - 2rem);
+		width: calc(100% - 2rem) !important;
 	}
 }
 
@@ -325,4 +325,9 @@
 
 .news-section a.button {
 	margin-right: 2rem;
+}
+
+figure.wp-block-table {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
 }

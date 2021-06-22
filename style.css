@@ -344,11 +344,19 @@ figure.wp-block-table {
 .home .front-widget-area {
 	display: flex;
 	flex-direction: column;
+}
 
+.home .front-widget-area .widget img, .home .front-widget-area .widget .textwidget p {
+	margin-top: .5rem;
+	margin-bottom: .5rem;
 }
 
 @media (min-width: 48rem) {
 	.home .front-widget-area {
 		flex-direction: row;
+	}
+	.home .front-widget-area .widget {
+		flex: 1 1 0;
+		width: 0;
 	}
 }

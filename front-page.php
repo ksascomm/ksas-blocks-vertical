@@ -20,7 +20,7 @@ get_header();
 		<?php
 		get_template_part( 'template-parts/content', 'front' );
 
-		endwhile; // End of the loop.
+	endwhile; // End of the loop.
 	?>
 
 		<?php
@@ -33,7 +33,7 @@ get_header();
 			?>
 		<div class="news-section mb-24">
 			<div class="front prose prose-sm sm:prose lg:prose-lg mx-auto">
-			<div class="flex justify-between">
+				<div class="flex justify-between">
 					<div>
 						<h2><?php echo esc_html( $heading ); ?>
 					</div>
@@ -56,11 +56,14 @@ get_header();
 					get_template_part( 'template-parts/content', 'post-excerpt' );
 				endwhile;
 			endif;
+
+			// Restore the $post global to the current post in the main query!
+			wp_reset_postdata();
 			?>
 		</div>
-		<?php else : // field_name returned false. ?>
+		<?php else : // show_homepage_news_feed returned false. ?>
 
-		<?php endif; // end of if field_name logic. ?>
+		<?php endif; // end of if show_homepage_news_feed logic. ?>
 
 		<?php
 		if ( function_exists( 'get_field' ) && get_field( 'custom_sidebar' ) ) :

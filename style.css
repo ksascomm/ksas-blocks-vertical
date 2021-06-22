@@ -339,4 +339,17 @@ figure.wp-block-table {
 	box-shadow:none;
 	margin: 1rem;
 	padding: 1rem;
+	width: inherit;
+}
+
+.home .front-widget-area {
+	display: flex;
+	flex-direction: column;
+
+}
+
+@media (min-width: 48rem) {
+	.home .front-widget-area {
+		flex-direction: row;
+	}
 }

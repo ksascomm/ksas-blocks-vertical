@@ -69,7 +69,7 @@ get_header();
 			<?php
 			$custom_sidebar_widget = get_field( 'custom_sidebar', false, false );
 			if ( is_active_sidebar( $custom_sidebar_widget ) ) : ?>
-				<div class="flex flex-col md:flex-row">
+				<div class="front-widget-area">
 					<?php dynamic_sidebar( $custom_sidebar_widget ); ?>
 				</div>
 			<?php endif; ?>

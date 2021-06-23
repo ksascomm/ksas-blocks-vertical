@@ -38,6 +38,11 @@
 		<?php endif; ?>
 	</script>
 	<!-- End Google Analytics -->
+	<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/dist/fonts/gentona/Gentona-Light.woff' ); ?>" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/dist/fonts/gentona/Gentona-SemiBold.woff' ); ?>" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/dist/fonts/gentona/Gentona-Bold.woff' ); ?>" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/dist/fonts/quadon/Quadon-Medium.woff' ); ?>" as="font" type="font/woff" crossorigin="anonymous">
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -58,7 +63,7 @@
 					</div>
 					<div class="lg:col-span-2">
 						<h1 class="site-title font-serif font-bold mt-4">
-						<a class=" text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<a class="text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php bloginfo( 'name' ); ?>
 							<small class="block font-normal pt-1">
 							<?php

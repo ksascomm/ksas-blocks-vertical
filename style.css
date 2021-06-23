@@ -267,6 +267,15 @@ figure.wp-block-table {
 
 /* Media Queries ------------------------- */
 
+@media screen and (max-width: 499px) {
+	.shield {
+		width: 200px;
+	}
+	.site-title {
+		font-size: 1.5rem;
+	}
+}
+
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: block !important;

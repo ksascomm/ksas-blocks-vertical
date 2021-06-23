@@ -16,7 +16,7 @@ get_header();
 ?>
 
 <div class="flex flex-wrap md:flex-row-reverse">
-	<main id="site-content" class="site-main page-with-sidebar w-full lg:w-4/5 prose prose-sm sm:prose lg:prose-lg mx-auto">
+	<main id="site-content" class="site-main page-with-sidebar w-full lg:w-4/5 prose sm:prose lg:prose-lg mx-auto">
 	<div class="breadcrumbs mb-4" typeof="BreadcrumbList" vocab="https://schema.org/">
 		<?php
 		if ( function_exists( 'bcn_display' ) ) {

@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <div class="flex flex-wrap md:flex-row-reverse">
-	<main id="site-content" class="site-main page-with-sidebar w-full lg:w-4/5 prose prose-sm sm:prose lg:prose-lg mx-auto">
+	<main id="site-content" class="site-main page-with-sidebar w-full lg:w-4/5 prose sm:prose lg:prose-lg mx-auto">
 
 	<?php
 	while ( have_posts() ) :
@@ -32,7 +32,7 @@ get_header();
 			$news_quantity = get_field( 'homepage_news_posts', 'option' );
 			?>
 		<div class="news-section mb-24">
-			<div class="front prose prose-sm sm:prose lg:prose-lg mx-auto">
+			<div class="front prose sm:prose lg:prose-lg mx-auto">
 				<div class="flex justify-between">
 					<div>
 						<h2><?php echo esc_html( $heading ); ?>

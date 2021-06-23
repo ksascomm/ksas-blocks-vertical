@@ -11,52 +11,13 @@
  Text Domain:  ksas-blocks-child
 */
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: block !important;
-	}
-	.main-navigation li {
-		float: inherit !important;
-	}
-
-}
-
-
-@media screen and (min-width: 768px) {
-	.menu-toggle {
-	  display: none !important;
-	}
-}
-
-@media screen and (min-width: 37.5em) and (max-width: 767px) {
-	.main-navigation ul {
-		display: none !important;
-	}
-	.main-navigation.toggled ul {
-		display: inherit !important;
-	}
+.site-title a {
+    padding-top: .25rem;
 }
 
 .hidden {
 	display: none;
 }
-
-
-@media screen and (min-width: 62rem) {
-	.lg\:w-1\/5 {
-		width: 20% !important;
-	}
-	.lg\:w-4\/5 {
-		width: 80% !important;
-	}
-	.lg\:block {
-		display: block;
-	}
-	.md\:flex-row-reverse .site-main {
-		padding-left: 2rem;
-	}
-}
-
 
 .text-grey-cool {
     color: #bfccd9;
@@ -66,12 +27,7 @@
 	width: 75%;
 }
 
-/*
-@media screen and (min-width: 1024px) {
-	.menu-toggle {
-	  display: none !important;
-	}
-}*/
+/* Sidebar Navigation ------------------------- */
 
 .sidebar {
 	padding-left: 0 !important;
@@ -137,7 +93,7 @@
 	padding-left: 3.5rem;
 }
 
-
+/* Search Box */
 .sidebar .search-form {
 	padding: 0.5rem;
 	padding-left: 1.5rem;
@@ -168,7 +124,6 @@
 }
 
 /* Alignment Classes ------------------------- */
-
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
 	max-width: 58rem;
 	width: calc(100% - 4rem);
@@ -195,7 +150,6 @@
 }
 
 /* Full */
-
 .alignfull {
 	margin-top: 2rem;
 	margin-right: auto;
@@ -211,7 +165,6 @@
 }
 
 /* Wide */
-
 .alignwide {
 	max-width: 120rem;
 	position: relative;
@@ -223,7 +176,6 @@
 }
 
 /* Center */
-
 .aligncenter,
 .aligncenter img {
 	margin-left: auto;
@@ -231,21 +183,18 @@
 }
 
 /* Left and right */
-
 .alignleft,
 .alignright {
 	max-width: 50%;
 }
 
 .alignleft {
-
 	/*rtl:ignore*/
 	float: left;
 	margin: 0.3rem 2rem 2rem 2rem;
 }
 
 .alignright {
-
 	/*rtl:ignore*/
 	float: right;
 	margin: 0.3rem 2rem 2rem 2rem;
@@ -254,7 +203,6 @@
 [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignleft,
 [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignleft,
 [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignleft {
-
 	/*rtl:ignore*/
 	margin-left: 2rem;
 }
@@ -262,13 +210,11 @@
 [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignright,
 [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignright,
 [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignright {
-
 	/*rtl:ignore*/
 	margin-right: 2rem;
 }
 
 /* Entry Media ------------------------------- */
-
 .alignfull > figcaption,
 .alignfull > .wp-caption-text {
 	margin-left: auto;
@@ -277,51 +223,19 @@
 	width: calc(100% - 4rem);
 }
 
-@media screen and (min-width: 1000px) {
-	.slider.swiper-container.alignfull {
-		width: 75vw !important;
-		margin-top: 0 !important;
-		margin-bottom: 0 !important;
-		margin-left: calc(65% - 50vw) !important;
-	}
-}
 
-
+/* Slider ------------------------- */
 .prose .swiper-slide a.button {
 	font-size: .9rem !important;
 	padding: .75rem;
 }
 
-.slide-caption h3 {
-    /*font-size: 1.25rem !important;*/
-}
 .slide-caption {
     font-size: 1rem;
 	line-height: 1.5;
 }
 
-@media screen and (min-width: 1000px) and (max-width:1099px) {
-	h1.site-title {
-		margin-left: 3rem;
-	}
-}
-
-@media (min-width: 1000px) {
-	.header-inner {
-		padding: 1.4rem 0 !important;
-	}
-}
-
-@media (min-width: 700px) {
-	.section-inner {
-		width: calc(100% - 2rem) !important;
-	}
-}
-
-.site-title a {
-    padding-top: .25rem;
-}
-
+/* Homepage Widgets ------------------------- */
 .news-section a.button {
 	margin-right: 2rem;
 }
@@ -351,12 +265,76 @@ figure.wp-block-table {
 	margin-bottom: .5rem;
 }
 
-@media (min-width: 48rem) {
+/* Media Queries ------------------------- */
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: block !important;
+	}
+	.main-navigation li {
+		float: inherit !important;
+	}
+}
+
+@media (min-width: 700px) {
+	.section-inner {
+		width: calc(100% - 2rem) !important;
+	}
+}
+
+@media screen and (min-width: 37.5em) and (max-width: 767px) {
+	.main-navigation ul {
+		display: none !important;
+	}
+	.main-navigation.toggled ul {
+		display: inherit !important;
+	}
+}
+
+@media screen and (min-width: 768px) {
 	.home .front-widget-area {
 		flex-direction: row;
 	}
+
 	.home .front-widget-area .widget {
 		flex: 1 1 0;
 		width: 0;
+	}
+
+	.menu-toggle {
+	  display: none !important;
+	}
+}
+
+@media screen and (min-width: 62rem) {
+	.lg\:w-1\/5 {
+		width: 20% !important;
+	}
+	.lg\:w-4\/5 {
+		width: 80% !important;
+	}
+	.lg\:block {
+		display: block;
+	}
+	.md\:flex-row-reverse .site-main {
+		padding-left: 2rem;
+	}
+}
+
+@media screen and (min-width: 1000px) and (max-width:1099px) {
+	h1.site-title {
+		margin-left: 3rem;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.slider.swiper-container.alignfull {
+		width: 75vw !important;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+		margin-left: calc(65% - 50vw) !important;
+	}
+	.header-inner {
+		padding: 1.4rem 0 !important;
 	}
 }

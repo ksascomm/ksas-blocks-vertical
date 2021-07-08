@@ -351,3 +351,10 @@ figure.wp-block-table {
 		padding: 1.4rem 0 !important;
 	}
 }
+
+@media (min-width: 1280px) {
+	.entry-content>.alignwide {
+		width: inherit;
+		margin-left: 0rem;
+	}
+}

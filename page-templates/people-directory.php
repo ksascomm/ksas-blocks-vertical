@@ -5,6 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package KSAS_Blocks
+ *
+ * The Loop is split before and after People CPT query!
  */
 
 get_header();
@@ -25,11 +27,9 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 				?>
-		<section class="error-404 not-found prose p-2">
-			<header class="page-header">
+			<header class="entry-header">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			</header><!-- .page-header -->
-		</section>
 				<?php
 		endwhile;
 		endif;
@@ -67,7 +67,7 @@ get_header();
 
 				if ( $people_query->have_posts() ) :
 					?>
-					<div class="role-title <?php echo esc_html( $position->slug ); ?>">
+					<div class="pt-2 role-title <?php echo esc_html( $position->slug ); ?>">
 						<h3 class="uppercase"><?php echo esc_html( $position_name ); ?></h3>
 					</div>
 					<?php

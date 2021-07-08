@@ -62,19 +62,17 @@
 						</a>
 					</div>
 					<div class="lg:col-span-2">
-						<h1 class="site-title font-serif font-bold mt-4">
+						<h1 class="site-title font-serif font-bold text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mt-4">
 						<a class="text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php bloginfo( 'name' ); ?>
-							<small class="block font-normal pt-1">
 							<?php
 								$ksas_blocks_description = get_bloginfo( 'description', 'display' );
 							if (
 								$ksas_blocks_description || is_customize_preview() ) :
 								$ksas_blocks_description = get_bloginfo( 'description', 'display' );
-								echo $ksas_blocks_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+								echo '<span class="block font-normal pt-1 text-xl">' . $ksas_blocks_description .'</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
 								?>
 								<?php endif; ?>
-							</small>
 						</a>
 						</h1>
 					</div>

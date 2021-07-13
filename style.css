@@ -350,6 +350,9 @@ figure.wp-block-table {
 	.header-inner {
 		padding: 1.4rem 0 !important;
 	}
+	#site-header {
+		min-height: auto;
+	}
 }
 
 @media (min-width: 1280px) {

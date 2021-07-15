@@ -48,10 +48,10 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-	<header id="site-header" class="header-footer-group flex-col text-center content-center sm:flex-row lg:text-left sm:justify-between shadow sm:items-baseline w-full bg-blue " role="banner">
+	<header id="site-header" class="header-footer-group flex-col text-center content-center sm:flex-row lg:text-left sm:justify-between shadow sm:items-baseline w-full bg-blue" role="banner">
 	<div class="header-titles-wrapper">
 			<div class="header-inner section-inner">
-				<div class="header-titles grid grid-cols-1 lg:grid-cols-3 gap-4">
+				<div class="header-titles grid grid-cols-1 lg:grid-cols-3 gap-x-12">
 					<div class="h-auto shield mx-auto">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php if ( get_field( 'shield', 'option' ) == 'jhu' ) : ?>
@@ -62,7 +62,7 @@
 						</a>
 					</div>
 					<div class="lg:col-span-2">
-						<h1 class="site-title font-serif font-bold text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mt-4">
+						<h1 class="site-title font-serif font-bold text-2xl sm:text-xl md:text-2xl lg:text-4xl mt-4">
 						<a class="text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php bloginfo( 'name' ); ?>
 							<?php

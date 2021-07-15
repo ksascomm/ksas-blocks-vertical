@@ -269,6 +269,11 @@ figure.wp-block-table {
 	margin-bottom: .5rem;
 }
 
+.textwidget li {
+	line-height: 1.5;
+	font-size: 1rem;
+}
+
 /* Media Queries ------------------------- */
 
 @media screen and (max-width: 499px) {

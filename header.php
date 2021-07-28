@@ -53,13 +53,15 @@
 			<div class="header-inner section-inner">
 				<div class="header-titles grid grid-cols-1 lg:grid-cols-3 gap-x-12">
 					<div class="h-auto shield mx-auto">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<?php if ( get_field( 'shield', 'option' ) == 'jhu' ) : ?>
-								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="h-auto w-full p-2" alt="JHU Shield">
-							<?php else: ?>
-								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.shield.svg" class="h-auto w-full p-2" alt="KSAS Shield">
-							<?php endif; ?>
+						<?php if ( get_field( 'shield', 'option' ) == 'jhu' ) : ?>
+						<a href="https://www.jhu.edu/" title="Johns Hopkins University">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="h-auto w-full p-2" alt="JHU Shield">
 						</a>
+						<?php else : ?>
+						<a href="https://krieger.jhu.edu" rel="home">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.shield.svg" class="h-auto w-full p-2" alt="KSAS Shield">
+						</a>	
+						<?php endif; ?>
 					</div>
 					<div class="lg:col-span-2">
 						<h1 class="site-title font-serif font-bold text-2xl sm:text-xl md:text-2xl lg:text-4xl mt-4">

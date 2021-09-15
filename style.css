@@ -36,6 +36,7 @@
 .sidebar {
 	padding-left: 0 !important;
 	background: #F8F8F8;
+	z-index: 1;
 }
 
 .sidenav {
@@ -51,9 +52,9 @@
 }
 
 .sidenav a {
-	font-size: 1.125rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	font-size: 1rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
 	padding-left: 1rem;
 	display: block;
 	color: #002d72;
@@ -89,12 +90,12 @@
 
 /* 2nd Level Pages */
 .sidenav ul.sub-menu li a {
-	padding-left: 2.5rem;
+	padding-left: 1.75rem;
 }
 
 /* 3rd Level Pages */
 .sidenav ul.sub-menu li ul.sub-menu li a {
-	padding-left: 3.5rem;
+	padding-left: 2.5rem;
 }
 
 /* Search Box */
@@ -130,7 +131,7 @@
 /* Alignment Classes ------------------------- */
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
 	max-width: 58rem;
-	width: calc(100% - 4rem);
+	width: calc(100% - 1rem);
 }
 
 [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
@@ -250,7 +251,8 @@ figure.wp-block-table {
 }
 
 .home .widget {
-	background: #f8f8f8 !important;
+	background: #f8f8f8;
+	background: #fefefe;
 	border: none !important;
 	border: 1px solid hsla(0,0%,4%,.25) !important;
 	box-shadow:none;
@@ -282,6 +284,25 @@ figure.wp-block-table {
 	}
 	.site-title {
 		font-size: 1.5rem;
+	}
+	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+		width: 100%;
+	}
+	.news-section .front.prose {
+		padding: 0 .5rem;	
+	}
+	.news-section .prose h2 {
+		font-size: 1.5rem
+	}
+	.news-section a.button {
+		margin-right: .5rem;
+	}
+}
+
+@media screen and (min-width: 576px) and (max-width: 990px) {
+	.entry-content, .entry-header {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 }
 
@@ -335,7 +356,7 @@ figure.wp-block-table {
 		display: block;
 	}
 	.md\:flex-row-reverse .site-main {
-		padding-left: 2rem;
+		padding-left: 1rem;
 	}
 }
 
@@ -364,5 +385,26 @@ figure.wp-block-table {
 	.entry-content>.alignwide {
 		width: inherit;
 		margin-left: 0rem;
+	}
+	.sidenav a {
+		font-size: 1.125rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		line-height: 1.2;
+	}
+	/* 2nd Level Pages */
+	.sidenav ul.sub-menu li a {
+		padding-left: 2.5rem;
+	}
+
+	/* 3rd Level Pages */
+	.sidenav ul.sub-menu li ul.sub-menu li a {
+		padding-left: 3.5rem;
+	}
+}
+
+@media (min-width: 1536px) {
+	.md\:flex-row-reverse .site-main {
+		padding-left: 0rem;
 	}
 }

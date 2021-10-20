@@ -25,32 +25,18 @@ function child_theme_enqueue_styles() {
 
 }
 
-/** Disable/Clean Inline Styles */
-function clean_post_content( $content ) {
-	// Remove inline styling.
-	// $content = preg_replace( '/(<[^>]+) style=".*?"/i', '$1', $content );.
-	$content = preg_replace( '/(<[span>]+) style=".*?"/i', '$1', $content );
-	$content = preg_replace( '/font-family\:.+?;/i', '', $content );
-	$content = preg_replace( '/color\:.+?;/i', '', $content );
+add_action( 'widgets_init', 'ksas_blocks_vertical_register_sidebar' );
 
-	// Remove font tag.
-	$content = preg_replace( '/<font[^>]+>/', '', $content );
-
-	// Remove empty tags.
-	$post_cleaners = array(
-		'<p></p>'             => '',
-		'<p> </p>'            => '',
-		'<p>&nbsp;</p>'       => '',
-		'<span></span>'       => '',
-		'<span> </span>'      => '',
-		'<span>&nbsp;</span>' => '',
-		'<span>'              => '',
-		'</span>'             => '',
-		'<font>'              => '',
-		'</font>'             => '',
+function ksas_blocks_vertical_register_sidebar() {
+	register_sidebar(
+		array(
+			'id'            => 'sidebar1',
+			'name'          => __( 'Global Sidebar', 'ksasacademic' ),
+			'description'   => __( 'The first (primary) sidebar.' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
 	);
-	$content       = strtr( $content, $post_cleaners );
-
-	return $content;
 }
-add_filter( 'the_content', 'clean_post_content' );

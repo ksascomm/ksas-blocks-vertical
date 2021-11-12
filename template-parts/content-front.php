@@ -9,7 +9,7 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php ksas_blocks_post_thumbnail(); ?>
 

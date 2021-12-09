@@ -73,11 +73,7 @@ get_header();
 					<?php
 					while ( $people_query->have_posts() ) :
 						$people_query->the_post();
-						if ( get_post_meta( $post->ID, 'ecpt_bio', true ) ) :
-							get_template_part( 'template-parts/content-people-full' );
-						else :
-							get_template_part( 'template-parts/content-people-excerpt' );
-						endif;
+						get_template_part( 'template-parts/content', 'people-excerpt' );
 					endwhile;
 				endif;
 			endforeach;

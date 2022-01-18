@@ -31,6 +31,17 @@
   width: 75%;
 }
 
+.flex-none {
+  flex: none;
+}
+
+@media (min-width: 62rem) { 
+  .lg\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+}
+
+
 /* Sidebar Navigation ------------------------- */
 
 .sidebar {

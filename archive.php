@@ -12,13 +12,12 @@ get_header();
 
 <div class="flex flex-wrap md:flex-row-reverse">
 	<main id="site-content" class="site-main page-with-sidebar w-full lg:w-4/5 prose sm:prose lg:prose-lg mx-auto">
-		<div class="breadcrumbs mb-4" typeof="BreadcrumbList" vocab="https://schema.org/">
 		<?php
-		if ( function_exists( 'bcn_display' ) ) {
-			bcn_display();
-		}
-		?>
+		if ( function_exists( 'bcn_display' ) ) :?>
+		<div class="breadcrumbs mb-4" typeof="BreadcrumbList" vocab="https://schema.org/">
+			<?php bcn_display(); ?>
 		</div>
+		<?php endif; ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header prose px-12 py-6">

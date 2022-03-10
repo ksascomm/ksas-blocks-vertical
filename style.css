@@ -41,9 +41,7 @@
   }
 }
 
-
 /* Sidebar Navigation ------------------------- */
-
 .sidebar {
   padding-left: 0 !important;
   background: #f8f8f8;
@@ -396,6 +394,12 @@ figure.wp-block-table {
 @media screen and (min-width: 1000px) and (max-width: 1099px) {
   h1.site-title {
     margin-left: 3rem;
+  }
+}
+
+@media screen and (min-width: 62rem) and (max-width: 999px) {
+  .sidebar {
+    display: none;
   }
 }
 

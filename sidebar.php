@@ -11,15 +11,18 @@
 
 <aside id="secondary" class="sidebar widget-area w-full lg:w-1/5 bg-grey-lightest">
 	<div class="menu hidden lg:block">
+		<nav id="site-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'ksas-blocks' ); ?>">
 		<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'main-nav',
-					'menu_id'        => 'primary-menu',
-					'menu_class'     => 'sidenav',
-				)
-			);
-			?>
+		wp_nav_menu(
+			array(
+				'theme_location' => 'main-nav',
+				'menu_id'        => 'primary-menu',
+				'menu_class'     => 'sidenav',
+				'container'      => false,
+			)
+		);
+		?>
+		</nav>
 		<hr class="w-3/4 mx-auto text-grey-cool">
 		<?php
 			get_search_form(

@@ -383,10 +383,10 @@ figure.wp-block-table {
 
 @media screen and (min-width: 62rem) {
   .lg\:w-1\/5 {
-    width: 20% !important;
+    width: 20%;
   }
   .lg\:w-4\/5 {
-    width: 80% !important;
+    width: 80%;
   }
   .lg\:block {
     display: block;
@@ -451,8 +451,10 @@ figure.wp-block-table {
   }
 }
 
+/* 2xl breakpoint */
 @media (min-width: 1536px) {
-  .md\:flex-row-reverse .site-main {
-    padding-left: 0rem;
+  .site-main {
+    padding-left: 0rem !important;
+    margin-left: 5rem !important;
   }
 }

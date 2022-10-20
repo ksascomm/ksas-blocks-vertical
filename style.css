@@ -458,3 +458,23 @@ figure.wp-block-table {
     margin-left: 5rem !important;
   }
 }
+
+#site-navigation li.authenticate a::after {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  font-weight: 900;
+  content: "\f2f6";
+  padding-left: 0.5rem;
+}
+
+#site-navigation li.external a::after {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  font-weight: 900;
+  content: "\f08e";
+  padding-left: 0.5rem;
+}

@@ -33,9 +33,15 @@
 		<?php if ( get_post_meta( $post->ID, 'ecpt_website', true ) ) : ?>
 			<a href="<?php echo esc_html( get_post_meta( $post->ID, 'ecpt_website', true ) ); ?>" title="<?php the_title(); ?>'s webpage" target="_blank">
 				<?php the_title(); ?>
-			</a>
+			</a>	
+				<?php if ( get_post_meta( $post->ID, 'ecpt_pronoun', true ) ) : ?>
+					<small>(<?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_pronoun', true ) ); ?>)</small>
+				<?php endif; ?>
 		<?php else : ?>
 			<?php the_title(); ?>
+			<?php if ( get_post_meta( $post->ID, 'ecpt_pronoun', true ) ) : ?>
+					<small>(<?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_pronoun', true ) ); ?>)</small>
+				<?php endif; ?>
 		<?php endif; ?>
 		</h2>
 

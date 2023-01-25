@@ -33,8 +33,8 @@ function ksas_blocks_vertical_register_sidebar() {
 			'id'            => 'sidebar1',
 			'name'          => __( 'Global Sidebar', 'ksasacademic' ),
 			'description'   => __( 'The first (primary) sidebar.' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		)

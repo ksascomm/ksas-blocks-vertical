@@ -11,8 +11,20 @@
  Text Domain:  ksas-blocks-child
 */
 
-main, #secondary {
-  min-height: calc(100vh - 395px);
+main {
+  min-height: calc(100vh - 576px);
+}
+
+@media (min-width: 500px) {
+  main {
+    min-height: calc(100vh - 650px);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    min-height: calc(100vh - 395px);
+  }
 }
 
 .site-title a {

@@ -11,6 +11,10 @@
  Text Domain:  ksas-blocks-child
 */
 
+main, #secondary {
+  min-height: calc(100vh - 395px);
+}
+
 .site-title a {
   padding-top: 0.25rem;
 }

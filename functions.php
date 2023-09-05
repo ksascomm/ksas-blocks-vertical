@@ -40,3 +40,22 @@ function ksas_blocks_vertical_register_sidebar() {
 		)
 	);
 }
+
+/**
+ *  Remove unnecessary classes for navigation menus
+ */
+function ksasaca_css_attributes_filter( $var ) {
+	$newnavclasses = is_array( $var ) ? array_intersect(
+		$var,
+		array(
+			'current_page_item',
+			'current_page_parent',
+			'current_page_ancestor',
+			'external',
+			'home',
+			'authenticate',
+		)
+	) : '';
+	return $newnavclasses;
+}
+add_filter( 'nav_menu_css_class', 'ksasaca_css_attributes_filter', 100, 1 );

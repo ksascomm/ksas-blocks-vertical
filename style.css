@@ -494,3 +494,8 @@ figure.wp-block-table {
   content: "\f08e";
   padding-left: 0.5rem;
 }
+
+.site-main .wp-block-image img[alt=""],
+.site-main .wp-block-image img:not([alt]) {
+  display: none;
+}

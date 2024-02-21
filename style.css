@@ -28,7 +28,7 @@ main {
   }
 }
 
-.wp-element-caption, .wp-caption-text {
+.wp-element-caption, .wp-caption-text, .wp-block-image figcaption {
   color: #31261d;
 }
 

@@ -11,6 +11,7 @@
  Text Domain:  ksas-blocks-child
 */
 
+
 main {
   min-height: calc(100vh - 576px);
 }
@@ -25,6 +26,10 @@ main {
   main {
     min-height: calc(100vh - 395px);
   }
+}
+
+.wp-element-caption {
+  color: #31261d;
 }
 
 .site-title a {

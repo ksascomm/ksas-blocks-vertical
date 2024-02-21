@@ -28,7 +28,7 @@ main {
   }
 }
 
-.wp-element-caption {
+.wp-element-caption, .wp-caption-text {
   color: #31261d;
 }
 

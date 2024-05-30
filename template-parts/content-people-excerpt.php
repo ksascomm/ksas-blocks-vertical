@@ -9,7 +9,7 @@
 
 ?>
 
-<article <?php post_class( 'people py-4 ml-4' ); ?>>
+<article <?php post_class( 'people my-4 ml-4' ); ?>>
 
 <div class="flex flex-wrap lg:flex-nowrap">
 	<?php if ( has_post_thumbnail() ) : ?>

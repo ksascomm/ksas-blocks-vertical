@@ -63,9 +63,14 @@ main {
 }
 
 .py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
+} 
 
 /* Sidebar Navigation ------------------------- */
 .sidebar {

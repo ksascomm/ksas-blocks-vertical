@@ -20,7 +20,7 @@ get_header();
 		<?php
 		if ( function_exists( 'bcn_display' ) ) :
 			?>
-		<div class="breadcrumbs mb-4" typeof="BreadcrumbList" vocab="https://schema.org/">
+		<div class="breadcrumbs my-4" typeof="BreadcrumbList" vocab="https://schema.org/">
 			<?php bcn_display(); ?>
 		</div>
 		<?php endif; ?>

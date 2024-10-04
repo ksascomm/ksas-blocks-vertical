@@ -16,14 +16,7 @@
 		<div class="pr-4 flex-none headshot">
 			<?php
 				the_post_thumbnail(
-					'medium',
-					array(
-						'alt' => the_title_attribute(
-							array(
-								'echo' => false,
-							)
-						),
-					)
+					'medium'
 				);
 			?>
 		</div>

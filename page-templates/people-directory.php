@@ -15,7 +15,8 @@ get_header();
 	<div class="flex flex-wrap md:flex-row-reverse">
 		<main id="site-content" class="site-main page-with-sidebar w-full lg:w-4/5 prose sm:prose lg:prose-lg mx-auto">
 		<?php
-		if ( function_exists( 'bcn_display' ) ) :?>
+		if ( function_exists( 'bcn_display' ) ) :
+			?>
 		<div class="breadcrumbs my-4" typeof="BreadcrumbList" vocab="https://schema.org/">
 			<?php bcn_display(); ?>
 		</div>
@@ -67,7 +68,7 @@ get_header();
 				if ( $people_query->have_posts() ) :
 					?>
 					<div class="pt-2 role-title <?php echo esc_html( $position->slug ); ?>">
-						<h3 class="uppercase"><?php echo esc_html( $position_name ); ?></h3>
+						<h2 class="uppercase"><?php echo esc_html( $position_name ); ?></h2>
 					</div>
 					<?php
 					while ( $people_query->have_posts() ) :

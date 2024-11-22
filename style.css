@@ -509,3 +509,36 @@ figure.wp-block-table {
 .site-main .wp-block-image img:not([alt]) {
   display: none;
 }
+
+/* People Directory
+--------------------------------------------- */
+.people h3 {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+  font-weight: 700;
+}
+
+.people p.interests {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.prose .people .contact-info ul {
+  margin-block: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.prose .people .contact-info li {
+  margin: 0;
+  padding-left: 0;
+}
+
+.prose .people .contact-info p {
+  margin-top: .75rem;
+  margin-bottom: .75rem;
+}
+
+.prose .people .contact-info .position p {
+  font-size: 1.25rem;
+}

@@ -42,20 +42,23 @@ function ksas_blocks_vertical_register_sidebar() {
 }
 
 /**
- *  Remove unnecessary classes for navigation menus
+ * Hide Parent Templates
  */
-function ksasaca_css_attributes_filter( $var ) {
-	$newnavclasses = is_array( $var ) ? array_intersect(
-		$var,
-		array(
-			'current_page_item',
-			'current_page_parent',
-			'current_page_ancestor',
-			'external',
-			'home',
-			'authenticate',
-		)
-	) : '';
-	return $newnavclasses;
+add_filter( 'theme_page_templates', 'child_theme_remove_page_template', 20, 3 );
+/**
+ * Remove page templates inherited from the parent theme.
+ *
+ * @param array $page_templates List of currently active page templates.
+ *
+ * @return array Modified list of page templates.
+ */
+function child_theme_remove_page_template( $page_templates ) {
+	// Remove the template we don’t need.
+	unset( $page_templates['page-templates/bulletin-board.php'] );
+	unset( $page_templates['page-templates/classroom-directory.php'] );
+	unset( $page_templates['page-templates/graduate-fields-of-study.php'] );
+	unset( $page_templates['page-templates/people-directory-sort.php'] );
+	unset( $page_templates['page-templates/profiles.php'] );
+	unset( $page_templates['page-templates/research-projects.php'] );
+	return $page_templates;
 }
-add_filter( 'nav_menu_css_class', 'ksasaca_css_attributes_filter', 100, 1 );

@@ -31,7 +31,7 @@ get_header();
 			$heading       = get_field( 'homepage_news_header', 'option' );
 			$news_quantity = get_field( 'homepage_news_posts', 'option' );
 			?>
-		<div class="news-section mb-24">
+		<div class="news-section">
 			<div class="front prose sm:prose lg:prose-lg mx-auto">
 				<div class="flex justify-between">
 					<div>

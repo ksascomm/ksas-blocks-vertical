@@ -62,3 +62,8 @@ function child_theme_remove_page_template( $page_templates ) {
 	unset( $page_templates['page-templates/research-projects.php'] );
 	return $page_templates;
 }
+
+function child_theme_dequeue_script() {
+	wp_dequeue_script('navbar');
+}
+add_action( 'wp_enqueue_scripts', 'child_theme_dequeue_script', 100 );

@@ -13,7 +13,7 @@ get_header();
 <div class="flex flex-wrap md:flex-row-reverse">
 	<main id="site-content" class="site-main page-with-sidebar w-full lg:w-4/5 prose sm:prose lg:prose-lg mx-auto">
 
-	<?php wp_redirect( wp_get_attachment_url(), 301 ); ?>
+	<?php wp_safe_redirect( wp_get_attachment_url(), 301 ); ?>
 
 	</main><!-- #main -->
 

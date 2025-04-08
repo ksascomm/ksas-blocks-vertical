@@ -42,33 +42,37 @@
 			<div class="position"><p class="leading-normal pr-2"><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_position', true ) ); ?></p></div>
 		<?php endif; ?>
 
-		<h4 class="sr-only">Contact Information</h4>
+		
+		<?php
+		if ( get_post_meta( $post->ID, 'ecpt_email', true ) ) :
+			?>
+			<h4 class="sr-only">Contact Information</h4>
 
-		<ul role="list">
-			<?php
-			if ( get_post_meta( $post->ID, 'ecpt_email', true ) ) :
-				$email = get_post_meta( $post->ID, 'ecpt_email', true );
-				?>
-				<li><span class="fa-solid fa-envelope" aria-hidden="true"></span>
-					<a href="<?php echo esc_url( 'mailto:' . antispambot( $email ) ); ?>">
-				<?php echo esc_html( $email ); ?>
-					</a>
-				</li>
-			<?php endif; ?>
-			<?php if ( get_post_meta( $post->ID, 'ecpt_office', true ) ) : ?>
-				<li><span class="fa-solid fa-location-dot" aria-hidden="true"></span> <?php echo esc_html( get_post_meta( $post->ID, 'ecpt_office', true ) ); ?></li>
-			<?php endif; ?>
+			<ul role="list">
+				<?php
+				if ( get_post_meta( $post->ID, 'ecpt_email', true ) ) :
+					$email = get_post_meta( $post->ID, 'ecpt_email', true );
+					?>
+					<li><span class="fa-solid fa-envelope" aria-hidden="true"></span>
+						<a href="<?php echo esc_url( 'mailto:' . antispambot( $email ) ); ?>">
+					<?php echo esc_html( $email ); ?>
+						</a>
+					</li>
+				<?php endif; ?>
+				<?php if ( get_post_meta( $post->ID, 'ecpt_office', true ) ) : ?>
+					<li><span class="fa-solid fa-location-dot" aria-hidden="true"></span> <?php echo esc_html( get_post_meta( $post->ID, 'ecpt_office', true ) ); ?></li>
+				<?php endif; ?>
 
-			<?php if ( get_post_meta( $post->ID, 'ecpt_phone', true ) ) : ?>
-				<li><span class="fa-solid fa-phone-office" aria-hidden="true"></span> <?php echo esc_html( get_post_meta( $post->ID, 'ecpt_phone', true ) ); ?></li>
-			<?php endif; ?>
+				<?php if ( get_post_meta( $post->ID, 'ecpt_phone', true ) ) : ?>
+					<li><span class="fa-solid fa-phone-office" aria-hidden="true"></span> <?php echo esc_html( get_post_meta( $post->ID, 'ecpt_phone', true ) ); ?></li>
+				<?php endif; ?>
 
-			<?php if ( get_post_meta( $post->ID, 'ecpt_lab_website', true ) ) : ?>
-			<li><span class="fa-solid fa-earth-americas"></span> <a href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_lab_website', true ) ); ?>" onclick="ga('send', 'event', 'People Directory', 'Group/Lab Website', '<?php the_title(); ?> | <?php echo esc_url( get_post_meta( $post->ID, 'ecpt_lab_website', true ) ); ?>')" target="_blank" aria-label="<?php the_title(); ?>'s Group/Lab Website">Group/Lab Website</a></li>
-			<?php endif; ?>
+				<?php if ( get_post_meta( $post->ID, 'ecpt_lab_website', true ) ) : ?>
+				<li><span class="fa-solid fa-earth-americas"></span> <a href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_lab_website', true ) ); ?>" onclick="ga('send', 'event', 'People Directory', 'Group/Lab Website', '<?php the_title(); ?> | <?php echo esc_url( get_post_meta( $post->ID, 'ecpt_lab_website', true ) ); ?>')" target="_blank" aria-label="<?php the_title(); ?>'s Group/Lab Website">Group/Lab Website</a></li>
+				<?php endif; ?>
 
-		</ul>
-
+			</ul>
+		<?php endif; ?>
 		<?php if ( get_post_meta( $post->ID, 'ecpt_expertise', true ) ) : ?>
 			<p class="leading-normal pr-2"><strong>Research Interests:&nbsp;</strong><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_expertise', true ) ); ?></p>
 		<?php endif; ?>

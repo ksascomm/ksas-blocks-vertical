@@ -27,7 +27,6 @@ get_header();
 
 		if ( get_field( 'show_homepage_news_feed', 'option' ) ) :
 			// If ACF Conditional is YES, display news feed.
-
 			$heading       = get_field( 'homepage_news_header', 'option' );
 			$news_quantity = get_field( 'homepage_news_posts', 'option' );
 			?>
@@ -71,7 +70,8 @@ get_header();
 		<!-- ACF Custom Widget Sidebar -->
 			<?php
 			$custom_sidebar_widget = get_field( 'custom_sidebar', false, false );
-			if ( is_active_sidebar( $custom_sidebar_widget ) ) : ?>
+			if ( is_active_sidebar( $custom_sidebar_widget ) ) :
+				?>
 				<div class="front-widget-area">
 					<?php dynamic_sidebar( $custom_sidebar_widget ); ?>
 				</div>

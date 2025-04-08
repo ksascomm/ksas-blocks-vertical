@@ -36,8 +36,8 @@ get_header();
 		?>
 			<?php
 			$positions      = get_terms(
-				'role',
 				array(
+					'taxonomy'   => 'role',
 					'orderby'    => 'slug',
 					'order'      => 'ASC',
 					'hide_empty' => true,

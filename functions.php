@@ -22,11 +22,12 @@ function child_theme_enqueue_styles() {
 		array( $parent_style ),
 		wp_get_theme()->get( 'Version' )
 	);
-
 }
 
 add_action( 'widgets_init', 'ksas_blocks_vertical_register_sidebar' );
-
+/**
+ * Registar the sidebar for this theme
+ */
 function ksas_blocks_vertical_register_sidebar() {
 	register_sidebar(
 		array(
@@ -63,7 +64,10 @@ function child_theme_remove_page_template( $page_templates ) {
 	return $page_templates;
 }
 
+/**
+ * Remove specific scripts from the parent theme.
+ */
 function child_theme_dequeue_script() {
-	wp_dequeue_script('navbar');
+	wp_dequeue_script( 'navbar' );
 }
 add_action( 'wp_enqueue_scripts', 'child_theme_dequeue_script', 100 );

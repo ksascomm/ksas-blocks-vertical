@@ -28,7 +28,7 @@
 		gtag('config', 'UA-40512757-1');
 		<?php
 		$analytics_id = get_field( 'google_analytics_id', 'option' );
-		$default_id = 'UA-100553583-1';
+		$default_id   = 'UA-100553583-1';
 		?>
 		<?php if ( $analytics_id ) : ?>
 		gtag('config', '<?php echo $analytics_id; ?>');
@@ -65,16 +65,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="h-auto shield mx-auto">
 						<?php if ( get_field( 'shield', 'option' ) == 'jhu' ) : ?>
 						<a href="https://www.jhu.edu/" title="Johns Hopkins University">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="h-auto w-full p-2 hover:opacity-75" alt="JHU Shield">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="h-auto w-full p-2 lg:p-0 hover:opacity-75" alt="JHU Shield">
 						</a>
 						<?php else : ?>
 						<a href="https://krieger.jhu.edu" rel="home">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.shield.svg" class="h-auto w-full p-2 hover:opacity-75" alt="KSAS Shield">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.shield.svg" class="h-auto w-full p-2 lg:p-0 hover:opacity-75" alt="KSAS Shield">
 						</a>	
 						<?php endif; ?>
 					</div>
 					<div class="lg:col-span-2">
-						<h1 class="site-title font-serif font-bold text-2xl sm:text-xl md:text-2xl lg:text-4xl mt-4">
+						<h1 class="site-title font-serif font-bold text-2xl lg:text-4xl mt-4">
 						<a class="text-white hover:text-grey" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php bloginfo( 'name' ); ?>
 							<?php
@@ -82,7 +82,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							if (
 								$ksas_blocks_description || is_customize_preview() ) :
 								$ksas_blocks_description = get_bloginfo( 'description', 'display' );
-								echo '<span class="block font-normal pt-1 text-xl">' . $ksas_blocks_description .'</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+								echo '<span class="block font-normal pt-1 text-lg lg:text-xl">' . $ksas_blocks_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
 								?>
 								<?php endif; ?>
 						</a>

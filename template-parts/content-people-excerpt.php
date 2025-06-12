@@ -9,19 +9,30 @@
 
 ?>
 
-<article <?php post_class( 'people p-4 lg:px-0 lg:py-4 my-2 lg:my-0 lg:ml-4' ); ?>>
+<article <?php post_class( 'people p-4 lg:px-0 lg:py-4 my-2 lg:my-0 lg:ml-4 w-11/12 lg:w-full border-grey border-solid border lg:border-none' ); ?>>
 
 <div class="flex flex-wrap lg:flex-nowrap">
 	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="pr-4 flex-none headshot">
+		<div class="flex-none hidden pl-4 lg:pl-0 lg:pr-4 headshot lg:my-4 lg:mr-4 lg:ml-0 lg:relative ">
+			<div class="w-[187px] h-[225px]">
 			<?php
 				the_post_thumbnail(
-					'medium'
+					'large',
+					array(
+						'class' => 'w-full h-0 lg:h-full object-cover pr-0 mt-0! mb-2',
+						'alt'   => the_title_attribute(
+							array(
+								'echo' => false,
+							)
+						),
+					)
 				);
 			?>
+			</div>
 		</div>
+	<div class="break"></div> <!-- break -->
 	<?php endif; ?>
-	<div class="flex-grow contact-info">
+	<div class="grow contact-info">
 		<h3 class="font-heavy">
 		<?php if ( get_post_meta( $post->ID, 'ecpt_website', true ) ) : ?>
 			<a href="<?php echo esc_html( get_post_meta( $post->ID, 'ecpt_website', true ) ); ?>" title="<?php the_title(); ?>'s webpage" target="_blank">
@@ -68,16 +79,16 @@
 				<?php endif; ?>
 
 				<?php if ( get_post_meta( $post->ID, 'ecpt_lab_website', true ) ) : ?>
-				<li><span class="fa-solid fa-earth-americas"></span> <a href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_lab_website', true ) ); ?>" onclick="ga('send', 'event', 'People Directory', 'Group/Lab Website', '<?php the_title(); ?> | <?php echo esc_url( get_post_meta( $post->ID, 'ecpt_lab_website', true ) ); ?>')" target="_blank" aria-label="<?php the_title(); ?>'s Group/Lab Website">Group/Lab Website</a></li>
+				<li><span class="fa-solid fa-earth-americas"></span> <a href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_lab_website', true ) ); ?>" target="_blank" aria-label="<?php the_title(); ?>'s Group/Lab Website">Group/Lab Website</a></li>
 				<?php endif; ?>
 
 			</ul>
 		<?php endif; ?>
 		<?php if ( get_post_meta( $post->ID, 'ecpt_expertise', true ) ) : ?>
-			<p class="leading-normal pr-2"><strong>Research Interests:&nbsp;</strong><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_expertise', true ) ); ?></p>
+			<p class="leading-normal pr-2"><strong class="font-bold font-heavy">Research Interests:&nbsp;</strong><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_expertise', true ) ); ?></p>
 		<?php endif; ?>
 		<?php if ( get_post_meta( $post->ID, 'ecpt_degrees', true ) ) : ?>
-			<p class="leading-normal pr-2"><strong>Education:&nbsp;</strong><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_degrees', true ) ); ?></p>
+			<p class="leading-normal pr-2"><strong class="font-bold font-heavy">Education:&nbsp;</strong><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_degrees', true ) ); ?></p>
 		<?php endif; ?>
 	</div>
 </div>

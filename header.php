@@ -44,11 +44,6 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-PDL5K37');</script>
 	<!-- End Google Tag Manager -->
-	<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/dist/fonts/gentona/Gentona-Light.woff' ); ?>" as="font" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/dist/fonts/gentona/Gentona-SemiBold.woff' ); ?>" as="font" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/dist/fonts/gentona/Gentona-Bold.woff' ); ?>" as="font" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/dist/fonts/quadon/Quadon-Medium.woff' ); ?>" as="font" type="font/woff" crossorigin="anonymous">
-
 </head>
 
 <body <?php body_class(); ?>>
@@ -58,23 +53,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <a class="skip-link screen-reader-text" href="#site-content"><?php esc_html_e( 'Skip to content', 'ksas-blocks' ); ?></a>
 <?php wp_body_open(); ?>
-	<header id="site-header" class="header-footer-group flex-col text-center content-center sm:flex-row lg:text-left sm:justify-between shadow sm:items-baseline w-full bg-blue" role="banner">
+	<header id="site-header" class="flex-col content-center w-full text-center shadow header-footer-group sm:flex-row lg:text-left sm:justify-between sm:items-baseline bg-blue" role="banner">
 	<div class="header-titles-wrapper">
 			<div class="header-inner section-inner">
-				<div class="header-titles grid grid-cols-1 lg:grid-cols-3 gap-x-12">
-					<div class="h-auto shield mx-auto">
+				<div class="grid grid-cols-1 header-titles lg:grid-cols-3 gap-x-12">
+					<div class="h-auto mx-auto shield">
 						<?php if ( get_field( 'shield', 'option' ) == 'jhu' ) : ?>
 						<a href="https://www.jhu.edu/" title="Johns Hopkins University">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="h-auto w-full p-2 lg:p-0 hover:opacity-75" alt="JHU Shield">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="w-full h-auto p-2 lg:p-0 hover:opacity-75" alt="JHU Shield">
 						</a>
 						<?php else : ?>
 						<a href="https://krieger.jhu.edu" rel="home">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.shield.svg" class="h-auto w-full p-2 lg:p-0 hover:opacity-75" alt="KSAS Shield">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.shield.svg" class="w-full h-auto p-2 lg:p-0 hover:opacity-75" alt="KSAS Shield">
 						</a>	
 						<?php endif; ?>
 					</div>
 					<div class="lg:col-span-2">
-						<h1 class="site-title font-serif font-bold text-2xl lg:text-4xl mt-4">
+						<h1 class="mt-4 font-serif text-2xl font-bold site-title lg:text-4xl">
 						<a class="text-white hover:text-grey" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php bloginfo( 'name' ); ?>
 							<?php
@@ -82,7 +77,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							if (
 								$ksas_blocks_description || is_customize_preview() ) :
 								$ksas_blocks_description = get_bloginfo( 'description', 'display' );
-								echo '<span class="block font-normal pt-1 text-lg lg:text-xl">' . $ksas_blocks_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+								echo '<span class="block pt-1 text-lg font-normal lg:text-xl">' . $ksas_blocks_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
 								?>
 								<?php endif; ?>
 						</a>

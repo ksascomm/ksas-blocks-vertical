@@ -52,7 +52,7 @@ get_header();
 			if ( $news_query->have_posts() ) :
 				while ( $news_query->have_posts() ) :
 					$news_query->the_post();
-					get_template_part( 'template-parts/content', 'post-excerpt' );
+					get_template_part( 'template-parts/content', 'front-post-excerpt' );
 				endwhile;
 			endif;
 

@@ -121,6 +121,7 @@ main {
 	padding-left: 1rem;
 	display: block;
 	color: #002d72;
+	letter-spacing: -0.03rem;
 }
 
 .sidenav a:hover {

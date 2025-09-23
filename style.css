@@ -5,7 +5,7 @@
  Author:       KSAS Communications
  Author URI:   https://github.com/ksascomm
  Template:     ksas-blocks
- Version:      4.1.0
+ Version:      4.1.1
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  ksas-blocks-child
@@ -40,6 +40,10 @@ main {
 	color: #31261d;
 }
 
+.site-title {
+	font-size: 2.5rem;
+}
+
 .site-title a {
 	padding-top: 0.25rem;
 }
@@ -69,7 +73,7 @@ main {
 		flex-wrap: nowrap;
 	}
 	.prose h1.entry-title {
-		font-size: 2.75rem;
+		font-size: 2.5rem;
 	}
 }
 
@@ -336,7 +340,7 @@ figure.wp-block-table {
 
 /* Media Queries ------------------------- */
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 600px) {
 	.shield {
 		width: 200px;
 	}

@@ -50,15 +50,20 @@ main {
    ========================================================================== */
 
 .site-title {
-    font-size: 2.5rem;
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
 }
 
 .site-title a {
-    padding-top: 0.25rem;
+    padding-top: 0.5rem;
 }
 
 .prose h1.entry-title {
     font-size: 2rem;
+}
+
+.entry-content.front-page  {
+	padding-top: 1rem;
 }
 
 .entry-content p a {
@@ -83,6 +88,10 @@ figure.wp-block-table {
 .site-main .wp-block-image img[alt=""],
 .site-main .wp-block-image img:not([alt]) {
     display: none;
+}
+
+.page .entry-content h2.wp-block-heading, .page .entry-content h3.wp-block-heading, .page .entry-content h4.wp-block-heading, .page .entry-content h5.wp-block-heading, .page .entry-content h6.wp-block-heading {
+	max-width: 70ch !important;
 }
 
 /* ==========================================================================
@@ -440,6 +449,8 @@ figure.wp-block-table {
     }
 }
 
+
+
 @media only screen and (width >= 768px) {
     #primary-menu>.menu-item.current-menu-parent>a {
         box-shadow: none;
@@ -552,6 +563,12 @@ figure.wp-block-table {
 }
 
 @media (width >= 64rem) {
+
+	.header-titles-wrapper {
+		justify-content: start;
+		padding: 1rem 3.5rem;
+	}
+
     .lg\:p-0 {
         padding: calc(var(--spacing) * 0);
     }
@@ -564,6 +581,11 @@ figure.wp-block-table {
     .home .site-main .article-excerpt .entry-content p {
         max-width: 90ch !important;
     }
+
+	.site-title {
+    font-size: 2.25rem; /* 36px */
+    line-height: 2.5rem; /* 40px */
+  }
 }
 
 @media (min-width: 1280px) {
@@ -586,6 +608,20 @@ figure.wp-block-table {
     .sidenav ul.sub-menu li ul.sub-menu li a {
         padding-left: 3.5rem;
     }
+}
+
+/* xl (1280px) */
+@media (min-width: 1280px) {
+  .site-title {
+    font-size: 2.75rem;
+    line-height: 1;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+	.breadcrumbs {
+		margin-left: 0rem;
+	}
 }
 
 /* ==========================================================================

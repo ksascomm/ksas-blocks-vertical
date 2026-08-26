@@ -55,7 +55,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php wp_body_open(); ?>
 	<header id="site-header" class="flex-col content-center w-full text-center shadow header-footer-group sm:flex-row lg:text-left sm:justify-between sm:items-baseline bg-blue" role="banner">
 	<div class="header-titles-wrapper">
-			<div class="header-inner section-inner">
+			<div class="header-inner">
 				<div class="grid grid-cols-1 header-titles lg:grid-cols-3 gap-x-12">
 					<div class="h-auto mx-auto shield">
 						<?php if ( get_field( 'shield', 'option' ) == 'jhu' ) : ?>
@@ -69,7 +69,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<?php endif; ?>
 					</div>
 					<div class="lg:col-span-2">
-						<h1 class="mt-4 font-serif text-2xl font-bold site-title lg:text-4xl">
+						<h1 class="mt-4 font-serif-bold font-weight-bold site-title">
 						<a class="text-white hover:text-grey" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php bloginfo( 'name' ); ?>
 							<?php
